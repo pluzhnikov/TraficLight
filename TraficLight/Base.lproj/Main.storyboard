@@ -1,24 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TraficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ISw-sw-Td2">
+                                <rect key="frame" x="109.66666666666667" y="84" width="155.66666666666663" height="547.33333333333337"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6f-HD-1jY">
+                                        <rect key="frame" x="0.0" y="0.0" width="155.66666666666666" height="155.66666666666666"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="i6f-HD-1jY" secondAttribute="height" multiplier="1:1" id="eZv-kW-84m"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XdM-9a-ehS">
+                                        <rect key="frame" x="0.0" y="195.66666666666669" width="155.66666666666666" height="156"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XdM-9a-ehS" secondAttribute="height" multiplier="1:1" id="60x-fX-dAS"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0AF-y2-lRi">
+                                        <rect key="frame" x="0.0" y="391.66666666666669" width="155.66666666666666" height="155.66666666666669"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0AF-y2-lRi" secondAttribute="height" multiplier="1:1" id="oba-74-4f7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oB4-Tv-sqa">
+                                <rect key="frame" x="84.666666666666686" y="704.33333333333337" width="206" height="40.333333333333371"/>
+                                <color key="backgroundColor" red="0.1407926863" green="0.32893174400000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="206" id="71q-mW-NnL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="swichAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XDR-jN-xGz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ISw-sw-Td2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0Bf-oB-cHm"/>
+                            <constraint firstItem="i6f-HD-1jY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="128:667" id="FXw-b5-vre"/>
+                            <constraint firstItem="oB4-Tv-sqa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LHk-yu-UJz"/>
+                            <constraint firstItem="XdM-9a-ehS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="128:667" id="Mup-2X-xqx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oB4-Tv-sqa" secondAttribute="bottom" constant="33.5" id="P0F-mH-6Xc"/>
+                            <constraint firstItem="ISw-sw-Td2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="pde-TU-TEy"/>
+                            <constraint firstItem="0AF-y2-lRi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="128:667" id="w3d-Dm-Kwb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonStart" destination="oB4-Tv-sqa" id="Mry-ac-622"/>
+                        <outlet property="greenView" destination="0AF-y2-lRi" id="LYR-yB-hJH"/>
+                        <outlet property="redView" destination="i6f-HD-1jY" id="tat-bH-2s3"/>
+                        <outlet property="stackView" destination="ISw-sw-Td2" id="gvm-Lc-c4v"/>
+                        <outlet property="yellowView" destination="XdM-9a-ehS" id="3se-h8-NmI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="51.724137931034484"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
